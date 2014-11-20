@@ -1,0 +1,81 @@
+{
+  "component": {
+    "name": "name",
+    "moduleName": "module-name",
+    "prefix": "prefix/",
+    "demoJS": "demo.js",
+    "dest": "./dist",
+    "demo": "./dist/demo"
+  },
+
+  "clean": {
+   "src": ["./dist"]
+  },
+
+  "js": {
+    "watch": [
+      "./app/src/**/*.js",
+      "./app/demo/**/*.js"
+    ],
+    "src": [
+      "./app/src/**/*.module.js",
+      "./app/src/**/*.js",
+      "./app/src/**/*.html",
+      "!app/src/**/*.test.js"],
+    "demo":[
+      "./app/demo/**/*.js",
+      "./app/demo/**.html",
+      "!app/demo/index.html"
+    ],
+    "dest": "./dist",
+    "demoSrc": "./dist/demo"
+  },
+
+  "vendor": {
+    "dest": "./dist/demo/vendor",
+    "js": [
+        "./bower_components/angular/angular.min.js",
+        "./bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js",
+        "./bower_components/angular-ui-router/release/angular-ui-router.min.js"
+      ],
+    "css":  [
+        "./bower_components/ui-bootstrap/dist/x1-ui-bootstrap.css",
+        "./bower_components/ui-bootstrap/dist/demo/x1-ui-bootstrap.demo.css"
+      ],
+    "fonts": ["./bower_components/ui-bootstrap/dist/fonts/*"]
+  },
+
+  "sass": {
+    "watch": [
+      "./app/src/**/*.scss",
+      "./app/demo/**/*.scss"
+    ],
+    "src": ["./app/src/**/*.scss"]
+  },
+
+  "html": {
+    "watch":[
+      "./app/demo/index.html",
+      "./app/demo/templates/*.html"
+    ],
+    "demo": [
+      "./app/demo/index.html",
+      "./app/demo/templates/*.html"
+    ],
+    "src": ["./app/src/index.html"]
+  },
+
+  "images": {
+    "src": "./app/demo/images/*",
+    "dest": "./dist/demo/images/"
+  },
+
+  "server": {
+    "port": 22532,
+    "root": "./dist"
+  },
+
+  "karma": {
+    "config" : ""
+  }
+}
